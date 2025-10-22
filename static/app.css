@@ -87,3 +87,15 @@ p:not(:has(img)) {
   opacity: 1;
   z-index: 1;
 }
+
+@media (max-width: 767px) {
+  h1 {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  p:not(:has(img)) {
+    font-size: 1.25rem;
+  }
+}
