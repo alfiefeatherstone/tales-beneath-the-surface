@@ -1,3 +1,89 @@
+@import url("https://use.typekit.net/yui2ezq.css");
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,200&display=swap');
+
 * {
   box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: black;
+  color: white;
+}
+
+h1, h2, h3 {
+  font-family: "birch-std", serif;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0;
+}
+
+.title-card { 
+  position: relative; 
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+p:has(img) {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+p:has(img) img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.2;
+  z-index: 0;
+  position: absolute;
+}
+
+h1 {
+  font-size: 6rem;
+}
+h2 {
+  font-size: 4rem;
+  margin-bottom: 2rem;
+}
+p:not(:has(img)) {
+  font-family: "Roboto Flex", sans-serif;
+  font-size: 1.5rem;
+  max-width: 720px;
+  text-align: center;
+  z-index: 1;
+  margin: 0;
+  font-weight: 200;
+}
+
+.podcast-links, .social-links {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+.podcast-links p:has(img) {
+  position: static;
+  width: auto;
+  height: auto;
+}
+.podcast-links a {
+  height: 100%;
+  display: inline-block;
+  z-index: 2;
+  position: relative;
+}
+.podcast-links img {
+  position: static;
+  width: 180px;
+  height: auto;
+  opacity: 1;
+  z-index: 1;
 }
